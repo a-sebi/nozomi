@@ -68,7 +68,7 @@ in {
         "Music/.keep".text = "";
         "Pictures/.keep".text = "";
         "Videos/.keep".text = "";
-        "work/.keep".text = "";
+        #"Work/.keep".text = "";
         #".face".source = cfg.icon;
         #"Pictures/${
           #cfg.icon.fileName or (builtins.baseNameOf cfg.icon)
