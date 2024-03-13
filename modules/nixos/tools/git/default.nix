@@ -49,7 +49,11 @@ in {
     #  };
     #};
 
-    nozomi.home.configFile."git/config".text = import ./config.nix {sshKeyPath = "/home/${config.nozomi.user.name}/.ssh/id_ed25519.pub"; name = "Afdal Sebi"; email = "ssiabe@protonmail.com";};
+    nozomi.home.configFile."git/config".text = import ./config.nix {
+      sshKeyPath = "/home/${config.nozomi.user.name}/.ssh/id_ed25519.pub";
+      name = "Afdal Sebi";
+      email = "ssiabe@protonmail.com";
+    };
     nozomi.home.configFile."lazygit/config.yml".source = ./lazygitConfig.yml;
   };
 }

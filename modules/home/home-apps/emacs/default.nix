@@ -1,11 +1,13 @@
-{ lib, config, pkgs, ... }:
-
-let
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}: let
   inherit (lib) mkEnableOption mkIf;
 
   cfg = config.nozomi.home-apps.emacs;
-in
-{
+in {
   options.nozomi.home-apps.emacs = {
     enable = mkEnableOption "Emacs";
   };
@@ -19,30 +21,30 @@ in
         ripgrep
         gnutls
         emacs-all-the-icons-fonts
+        libvterm
         gnutls
         coreutils
         fd
         clang
       ];
 
-      sessionPath = [ "${config.xdg.configHome}/emacs/bin" ];
+      sessionPath = ["${config.xdg.configHome}/emacs/bin"];
       sessionVariables = {
         #DOOMDIR = ./doom;
         #DOOMDIR = "${config.xdg.configHome}/doom-config";
         DOOMDIR = "${config.xdg.configHome}/.doom";
         DOOMLOCALDIR = "${config.xdg.configHome}/doom-local";
-        };
+      };
     };
 
-  programs.emacs = {
-  #  #enable = true;
-    extraPackages = epkgs: [
-      epkgs.vterm
-    ];
-  };
-  services.emacs = {
-    enable = true;
-  };
-
+    programs.emacs = {
+      #  #enable = true;
+      extraPackages = epkgs: [
+        epkgs.vterm
+      ];
+    };
+    services.emacs = {
+      enable = true;
+    };
   };
 }

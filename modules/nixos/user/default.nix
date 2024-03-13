@@ -27,7 +27,6 @@ with lib.nozomi; let
   #  ''
   #    local target="$out/share/nozomi-icons/user/${cfg.name}"
   #    mkdir -p "$target"
-
   #    cp ${cfg.icon} "$target/${cfg.icon.fileName}"
   #  '';
 in {
@@ -71,9 +70,9 @@ in {
         #"Work/.keep".text = "";
         #".face".source = cfg.icon;
         #"Pictures/${
-          #cfg.icon.fileName or (builtins.baseNameOf cfg.icon)
+        #cfg.icon.fileName or (builtins.baseNameOf cfg.icon)
         #}".source =
-          #cfg.icon;
+        #cfg.icon;
       };
 
       extraOptions = {

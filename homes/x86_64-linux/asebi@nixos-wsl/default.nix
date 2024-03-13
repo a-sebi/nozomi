@@ -1,7 +1,12 @@
-{ lib, pkgs, config, osConfig ? { }, format ? "unknown", ... }:
-
-with lib.nozomi;
 {
+  lib,
+  pkgs,
+  config,
+  osConfig ? {},
+  format ? "unknown",
+  ...
+}:
+with lib.nozomi; {
   nozomi = {
     user = {
       enable = true;

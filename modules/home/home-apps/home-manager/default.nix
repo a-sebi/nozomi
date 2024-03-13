@@ -1,12 +1,13 @@
-{ lib, config, ... }:
-
-let
+{
+  lib,
+  config,
+  ...
+}: let
   inherit (lib) mkEnableOption mkIf;
   inherit (lib.nozomi) enabled;
 
   cfg = config.nozomi.home-apps.home-manager;
-in
-{
+in {
   options.nozomi.home-apps.home-manager = {
     enable = mkEnableOption "home-manager";
   };

@@ -1,10 +1,14 @@
-{ options, config, lib, pkgs, ... }:
-
-with lib;
-with lib.nozomi;
-let cfg = config.nozomi.tools.dev;
-in
 {
+  options,
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+with lib;
+with lib.nozomi; let
+  cfg = config.nozomi.tools.dev;
+in {
   options.nozomi.tools.dev = with types; {
     enable = mkBoolOpt false "Whether or not to enable development tools.";
   };

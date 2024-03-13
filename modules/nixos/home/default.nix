@@ -1,20 +1,27 @@
-{ options, config, pkgs, lib, inputs, ... }:
-
-with lib;
-with lib.nozomi;
-let cfg = config.nozomi.home;
-in
 {
+  options,
+  config,
+  pkgs,
+  lib,
+  inputs,
+  ...
+}:
+with lib;
+with lib.nozomi; let
+  cfg = config.nozomi.home;
+in {
   # imports = with inputs; [
   #   home-manager.nixosModules.home-manager
   # ];
 
   options.nozomi.home = with types; {
-    file = mkOpt attrs { }
+    file =
+      mkOpt attrs {}
       (mdDoc "A set of files to be managed by home-manager's `home.file`.");
-    configFile = mkOpt attrs { }
+    configFile =
+      mkOpt attrs {}
       (mdDoc "A set of files to be managed by home-manager's `xdg.configFile`.");
-    extraOptions = mkOpt attrs { } "Options to pass directly to home-manager.";
+    extraOptions = mkOpt attrs {} "Options to pass directly to home-manager.";
   };
 
   config = {

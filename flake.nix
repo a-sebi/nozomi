@@ -2,17 +2,30 @@
   description = "";
 
   inputs = {
-    # Core
+    # NixPkgs Unstable (nixos-unstable)
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+
+    # Home Manager
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    # Snowfall Lib
     snowfall-lib = {
       url = "github:snowfallorg/lib";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Snowfall Flake
+    flake.url = "github:snowfallorg/flake?ref=v1.3.1";
+    flake.inputs.nixpkgs.follows = "unstable";
+
+    # NixOS Generators
     nixos-generators.url = "github:nix-community/nixos-generators";
     nixos-generators.inputs.nixpkgs.follows = "nixpkgs";
+
+    # NixOS WSL
     nixos-wsl.url = "github:nix-community/nixos-wsl";
+    hyprland.url = "github:hyprwm/Hyprland";
   };
 
   outputs = inputs: let
@@ -39,7 +52,6 @@
       };
 
       overlays = with inputs; [];
-      
 
       systems.modules.nixos = with inputs; [
         home-manager.nixosModules.home-manager

@@ -18,7 +18,6 @@ with lib.nozomi; let
   # TODO: This is a hold-over from an earlier Snowfall Lib version which used
   # the specialArg `name` to provide the host name.
   name = host;
-
 in {
   options.nozomi.services.openssh = with types; {
     enable = mkBoolOpt false "Whether or not to configure OpenSSH support.";

@@ -10,7 +10,6 @@
   cfg = config.nozomi.home-apps.zsh;
 
   zsh-directory = ./p10k-config;
-
 in {
   options.nozomi.home-apps.zsh = {
     enable = mkEnableOption "ZSH";

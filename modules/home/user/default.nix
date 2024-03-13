@@ -1,6 +1,10 @@
-{ lib, config, pkgs, osConfig ? { }, ... }:
-
-let
+{
+  lib,
+  config,
+  pkgs,
+  osConfig ? {},
+  ...
+}: let
   inherit (lib) types mkIf mkDefault mkMerge;
   inherit (lib.nozomi) mkOpt;
 
@@ -9,12 +13,10 @@ let
   is-linux = pkgs.stdenv.isLinux;
 
   home-directory =
-    if cfg.name == null then
-      null
-    else
-      "/home/${cfg.name}";
-in
-{
+    if cfg.name == null
+    then null
+    else "/home/${cfg.name}";
+in {
   options.nozomi.user = {
     enable = mkOpt types.bool false "Whether to configure the user account.";
     name = mkOpt (types.nullOr types.str) config.snowfallorg.user.name "The user account.";
