@@ -22,7 +22,7 @@ in {
       };
 
       tools = {
-        appimage-run = enabled;
+
       };
     };
   };

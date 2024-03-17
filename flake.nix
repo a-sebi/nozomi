@@ -17,7 +17,7 @@
 
     # Snowfall Flake
     flake.url = "github:snowfallorg/flake?ref=v1.3.1";
-    flake.inputs.nixpkgs.follows = "unstable";
+    flake.inputs.nixpkgs.follows = "nixpkgs";
 
     # NixOS Generators
     nixos-generators.url = "github:nix-community/nixos-generators";
@@ -51,7 +51,9 @@
         allowUnfree = true;
       };
 
-      overlays = with inputs; [];
+      overlays = with inputs; [
+        flake.overlays.default
+      ];
 
       systems.modules.nixos = with inputs; [
         home-manager.nixosModules.home-manager

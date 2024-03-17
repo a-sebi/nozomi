@@ -60,13 +60,16 @@ with lib.nozomi; {
 
     cli-apps = {
       #neovim = enabled;
+      bottom = enabled;
       eza = enabled;
+      flake = enabled;
     };
 
     tools = {
+      dev = enabled;
+      direnv = enabled;
       git = enabled;
       tree = enabled;
-      dev = enabled;
     };
 
     services = {
