@@ -23,13 +23,18 @@ in {
   config = mkIf cfg.enable {
     # Desktop additions
     nozomi.desktop.addons = {
-      wofi = enabled;
-      waybar = enabled;
-      swaylock = enabled;
-      swayidle = enabled;
-      wlogout = enabled;
-      wl-clipboard = enabled;
+      brightnessctl = enabled;
+      dunst = enabled;
+      libnotify = enabled;
+      networkmanagerapplet = enabled;
       playerctl = enabled;
+      slurp = enabled;
+      swayidle = enabled;
+      swaylock = enabled;
+      waybar = enabled;
+      wl-clipboard = enabled;
+      wlogout = enabled;
+      wofi = enabled;
     };
 
     programs.hyprland = {
@@ -38,7 +43,7 @@ in {
       #enablenvidiaPatches = true; # Only use if nvidia card is used. This may need to be a system-specific config line
     };
     # Enable touchpad support (enabled default in most desktopManager).
-    services.xserver.libinput.enable = true;
+    services.libinput.enable = true;
 
     # Enable the X11 windowing system.
     services.xserver.enable = true;

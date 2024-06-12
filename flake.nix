@@ -1,5 +1,5 @@
 {
-  description = "";
+  description = "Nozomi - NixOS Config";
 
   inputs = {
     # NixPkgs Unstable (nixos-unstable)
@@ -16,7 +16,7 @@
     };
 
     # Snowfall Flake
-    flake.url = "github:snowfallorg/flake?ref=v1.3.1";
+    flake.url = "github:snowfallorg/flake";
     flake.inputs.nixpkgs.follows = "nixpkgs";
 
     # NixOS Generators

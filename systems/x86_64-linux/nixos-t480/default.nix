@@ -50,7 +50,6 @@ with lib.nozomi; {
     };
 
     apps = {
-      vlc = enabled;
       anki = enabled;
     };
 
@@ -75,6 +74,10 @@ with lib.nozomi; {
       boot = enabled;
       locale = enabled;
       time = enabled;
+    };
+
+    hardware = {
+      audio = enabled;
     };
   };
 

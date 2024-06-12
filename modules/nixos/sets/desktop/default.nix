@@ -24,6 +24,8 @@ in {
         firefox = enabled;
         vlc = enabled;
         gparted = enabled;
+        calibre = enabled;
+        jellyfin = enabled;
       };
     };
   };
