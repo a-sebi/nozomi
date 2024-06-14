@@ -47,6 +47,7 @@ with lib.nozomi; {
   nozomi = {
     sets = {
       desktop = enabled;
+      common = enabled;
     };
 
     apps = {
@@ -55,13 +56,10 @@ with lib.nozomi; {
 
     cli-apps = {
       #neovim = enabled;
-      eza = enabled;
       acpi = enabled;
-      bottom = enabled;
     };
 
     tools = {
-      git = enabled;
       tree = enabled;
       dev = enabled;
     };
@@ -72,8 +70,6 @@ with lib.nozomi; {
 
     system = {
       boot = enabled;
-      locale = enabled;
-      time = enabled;
     };
 
     hardware = {

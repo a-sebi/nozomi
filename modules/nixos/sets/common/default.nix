@@ -15,7 +15,7 @@ in {
   };
 
   config = mkIf cfg.enable {
-    environment.systemPackages = with pkgs; [ common ];
+    # environment.systemPackages = with pkgs; [ common ];
     nozomi = {
       cli-apps = {
         bottom = enabled;

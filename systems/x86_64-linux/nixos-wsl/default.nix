@@ -53,6 +53,7 @@ with lib.nozomi; {
   nozomi = {
     sets = {
       desktop = disabled;
+      common = enabled;
     };
 
     apps = {
@@ -61,15 +62,11 @@ with lib.nozomi; {
 
     cli-apps = {
       #neovim = enabled;
-      bottom = enabled;
-      eza = enabled;
-      flake = enabled;
     };
 
     tools = {
       dev = enabled;
       direnv = enabled;
-      git = enabled;
       tree = enabled;
     };
 

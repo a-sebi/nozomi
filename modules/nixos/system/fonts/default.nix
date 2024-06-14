@@ -28,7 +28,7 @@ in {
         hack-font
         meslo-lgs-nf
         fira-code
-        fire-code-symbols
+        fira-code-symbols
       ]
       ++ cfg.fonts;
   };
