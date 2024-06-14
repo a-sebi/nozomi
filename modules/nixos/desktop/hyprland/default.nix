@@ -30,6 +30,7 @@ in {
       playerctl = enabled;
       slurp = enabled;
       swayidle = enabled;
+      swaybg = enabled;
       swaylock = enabled;
       waybar = enabled;
       wl-clipboard = enabled;

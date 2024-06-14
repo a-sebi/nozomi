@@ -28,6 +28,8 @@ in {
           # Fix an issue with tmux.
           export KEYTIMEOUT=1
 
+          # Add atuin.
+          eval "$(atuin init zsh)"
         '';
 
         shellAliases = {

@@ -15,9 +15,9 @@ in {
   };
 
   config = mkIf cfg.enable {
-    # environment.systemPackages = with pkgs; [ common ];
     nozomi = {
       cli-apps = {
+        atuin = enabled;
         bottom = enabled;
         eza = enabled;
         flake = enabled;
@@ -31,6 +31,10 @@ in {
         fonts = enabled;
         locale = enabled;
         time = enabled;
+      };
+
+      hardware = {
+        networking = enabled;
       };
     };
   };
