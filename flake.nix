@@ -31,8 +31,6 @@
 
     # Catppuccin
     catppuccin.url = "github:catppuccin/nix";
-    catppuccin.inputs.nixpkgs.follows = "nixpkgs";
-    catppuccin.inputs.home-manager.follows = "home-manager";
   };
 
   outputs = inputs: let
