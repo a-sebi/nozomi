@@ -63,7 +63,7 @@
       ];
 
       systems.modules.nixos = with inputs; [
-        home-manager.nixosModules.home-manager
+        # home-manager.nixosModules.home-manager
       ];
 
       systems.hosts.nixos-wsl.modules = with inputs; [
@@ -71,7 +71,7 @@
       ];
 
       homes.modules = with inputs; [
-        catppuccin.nixosModules.catppuccin
+        catppuccin.homeManagerModules.catppuccin
       ];
 
       #templates = import ./templates {};

@@ -28,10 +28,11 @@ in {
       gtk = {
         enable = true;
 
-        iconTheme = {
-          name = "tela";
-          package = pkgs.tela-icon-theme;
-        };
+        # Conflicts with Catppuccin Papirus-Dark. Need to use `lib.mkForce value` or `lib.mkDefault value` in future to change priority
+        # iconTheme = {
+        #   name = "tela";
+        #   package = pkgs.tela-icon-theme;
+        # };
       };
     };
 
