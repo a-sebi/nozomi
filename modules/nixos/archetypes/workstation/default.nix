@@ -19,6 +19,7 @@ in {
       sets = {
         common = enabled;
         desktop = enabled;
+        media = enabled;
       };
 
       tools = {

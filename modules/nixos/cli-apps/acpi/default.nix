@@ -11,7 +11,7 @@ with lib.nozomi; let
 in {
   options.nozomi.cli-apps.acpi = with types; {
     enable =
-      mkBoolOpt false "Whether to enable acpi in the desktop environment.";
+      mkBoolOpt false "Whether to enable acpi.";
   };
 
   config = mkIf cfg.enable {

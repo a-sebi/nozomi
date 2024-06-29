@@ -21,6 +21,7 @@ in {
         bottom = enabled;
         eza = enabled;
         flake = enabled;
+        ranger = enabled;
       };
 
       tools = {

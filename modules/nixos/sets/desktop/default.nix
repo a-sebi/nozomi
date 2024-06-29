@@ -21,11 +21,16 @@ in {
       };
 
       apps = {
+        discord = enabled;
+        dropbox = enabled;
         firefox = enabled;
-        vlc = enabled;
+        floorp = enabled;
         gparted = enabled;
-        calibre = enabled;
-        jellyfin = enabled;
+        libreoffice = enabled;
+        signal-desktop = enabled;
+        thunderbird = enabled;
+        vlc = enabled;
+        vorta = enabled;
       };
     };
   };

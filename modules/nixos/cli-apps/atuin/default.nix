@@ -11,7 +11,7 @@ with lib.nozomi; let
 in {
   options.nozomi.cli-apps.atuin = with types; {
     enable =
-      mkBoolOpt false "Whether to enable atuin in the desktop environment.";
+      mkBoolOpt false "Whether to enable atuin.";
   };
 
   config = mkIf cfg.enable {

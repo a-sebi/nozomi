@@ -11,7 +11,7 @@ with lib.nozomi; let
 in {
   options.nozomi.cli-apps.bottom = with types; {
     enable =
-      mkBoolOpt false "Whether to enable bottom in the desktop environment.";
+      mkBoolOpt false "Whether to enable bottom.";
   };
 
   config = mkIf cfg.enable {

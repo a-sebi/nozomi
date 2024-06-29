@@ -48,14 +48,15 @@ with lib.nozomi; {
     sets = {
       desktop = enabled;
       common = enabled;
+      media = enabled;
+      work = enabled;
     };
 
     apps = {
-      anki = enabled;
+      anki = disabled;
     };
 
     cli-apps = {
-      #neovim = enabled;
       acpi = enabled;
     };
 

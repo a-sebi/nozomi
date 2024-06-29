@@ -13,10 +13,13 @@ in {
   };
 
   config = mkIf cfg.enable {
+    programs.neovim = {
+      enable = true;
+    };
     home = {
       packages = with pkgs; [
         less
-        neovim
+        # neovim
       ];
 
       sessionVariables = {

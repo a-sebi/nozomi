@@ -17,21 +17,22 @@ in {
     enable = mkBoolOpt false "Whether or not to enable Hyprland.";
     wallpaper = mkOpt (nullOr package) null "The wallpaper to display.";
     extraConfig =
-      mkOpt str "" "Additional configuration for the Sway config file.";
+      mkOpt str "" "Additional configuration for the Hyprland config file.";
   };
 
   config = mkIf cfg.enable {
     # Desktop additions
     nozomi.desktop.addons = {
-      # catppuccin = enabled;
       brightnessctl = enabled;
       dunst = enabled;
+      grim = enabled;
       libnotify = enabled;
       networkmanagerapplet = enabled;
+      pamixer = enabled;
       playerctl = enabled;
       slurp = enabled;
-      swayidle = enabled;
       swaybg = enabled;
+      swayidle = enabled;
       swaylock = enabled;
       waybar = enabled;
       wl-clipboard = enabled;

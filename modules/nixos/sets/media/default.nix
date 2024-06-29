@@ -17,6 +17,7 @@ in {
     nozomi = {
       apps = {
         calibre = enabled;
+        jellyfin = enabled;
       };
     };
   };
