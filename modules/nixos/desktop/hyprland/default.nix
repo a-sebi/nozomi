@@ -23,6 +23,7 @@ in {
   config = mkIf cfg.enable {
     # Desktop additions
     nozomi.desktop.addons = {
+      # catppuccin = enabled;
       brightnessctl = enabled;
       dunst = enabled;
       libnotify = enabled;
@@ -37,6 +38,8 @@ in {
       wlogout = enabled;
       wofi = enabled;
     };
+
+    nozomi.system.icons = enabled;
 
     programs.hyprland = {
       enable = true;

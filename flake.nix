@@ -25,7 +25,14 @@
 
     # NixOS WSL
     nixos-wsl.url = "github:nix-community/nixos-wsl";
+
+    # Hyprland
     hyprland.url = "github:hyprwm/Hyprland";
+
+    # Catppuccin
+    catppuccin.url = "github:catppuccin/nix";
+    catppuccin.inputs.nixpkgs.follows = "nixpkgs";
+    catppuccin.inputs.home-manager.follows = "home-manager";
   };
 
   outputs = inputs: let
@@ -57,6 +64,7 @@
 
       systems.modules.nixos = with inputs; [
         home-manager.nixosModules.home-manager
+        catppuccin.nixosModules.catppuccin
       ];
 
       systems.hosts.nixos-wsl.modules = with inputs; [

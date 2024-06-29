@@ -19,6 +19,7 @@ with lib.nozomi; {
       home-manager = enabled;
       zsh = enabled;
       kitty = enabled;
+      catppuccin = enabled;
     };
   };
 

@@ -13,7 +13,7 @@ in {
   # imports = with inputs; [
   #   home-manager.nixosModules.home-manager
   # ];
-
+  #
   options.nozomi.home = with types; {
     file =
       mkOpt attrs {}

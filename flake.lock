@@ -1,5 +1,20 @@
 {
   "nodes": {
+    "catppuccin": {
+      "locked": {
+        "lastModified": 1719457243,
+        "narHash": "sha256-5rOWwMAp/suWVKGavhfdyLsF2mA7Fv2DQWXlt7S+QWA=",
+        "owner": "catppuccin",
+        "repo": "nix",
+        "rev": "53967ef237edd38a5b5cc5441e9b6a44b9554977",
+        "type": "github"
+      },
+      "original": {
+        "owner": "catppuccin",
+        "repo": "nix",
+        "type": "github"
+      }
+    },
     "flake": {
       "inputs": {
         "flake-compat": "flake-compat",
@@ -432,6 +447,7 @@
     },
     "root": {
       "inputs": {
+        "catppuccin": "catppuccin",
         "flake": "flake",
         "home-manager": "home-manager",
         "hyprland": "hyprland",
