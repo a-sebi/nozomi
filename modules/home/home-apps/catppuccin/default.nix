@@ -18,15 +18,19 @@ in {
   };
 
   config = mkIf cfg.enable {
-    home-manager.users.${config.nozomi.user.name} = {
-      imports = [
-        catppuccin.homeManagerModules.catppuccin
-      ];
-    };
+    # home-manager.users.${config.nozomi.user.name} = {
+    #   imports = [
+    #     catppuccin.homeManagerModules.catppuccin
+    #   ];
+    # };
     catppuccin = {
       enable = true;
       flavor = "frappe";
     };
+    # gtk.catppuccin.enable = true;
+    # gtk.catppuccin.flavor = "frappe";
+    # programs.bottom.catppuccin.enable = true;
+
   };
 
 

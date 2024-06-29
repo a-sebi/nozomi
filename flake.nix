@@ -64,11 +64,14 @@
 
       systems.modules.nixos = with inputs; [
         home-manager.nixosModules.home-manager
-        catppuccin.nixosModules.catppuccin
       ];
 
       systems.hosts.nixos-wsl.modules = with inputs; [
         nixos-wsl.nixosModules.wsl
+      ];
+
+      homes.modules = with inputs; [
+        catppuccin.nixosModules.catppuccin
       ];
 
       #templates = import ./templates {};
