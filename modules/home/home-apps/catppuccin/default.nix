@@ -26,10 +26,13 @@ in {
     catppuccin = {
       enable = true;
       flavor = "frappe";
+      pointerCursor.enable = true;
     };
-    # gtk.catppuccin.enable = true;
-    # gtk.catppuccin.flavor = "frappe";
-    # programs.bottom.catppuccin.enable = true;
+    gtk.catppuccin.enable = true;
+    gtk.catppuccin.flavor = "frappe";
+    programs.bottom.catppuccin.enable = true;
+    programs.neovim.catppuccin.enable = true;
+    programs.kitty.catppuccin.enable = true;
 
   };
 
