@@ -15,6 +15,6 @@ in {
   };
 
   config = mkIf cfg.enable {
-    environment.systemPackages = with pkgs; [jellyfin];
+    environment.systemPackages = with pkgs; [ jellyfin-media-player ];
   };
 }
