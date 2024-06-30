@@ -61,6 +61,7 @@
 
       systems.modules.nixos = with inputs; [
         # home-manager.nixosModules.home-manager
+        catppuccin.nixosModules.catppuccin
       ];
 
       systems.hosts.nixos-wsl.modules = with inputs; [

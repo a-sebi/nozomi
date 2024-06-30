@@ -24,15 +24,15 @@ in {
     #   ++ cfg.icons;
 
     nozomi.home.extraOptions = {
-      gtk = {
-        enable = true;
+      # gtk = {
+      #   enable = true;
 
         # Conflicts with Catppuccin Papirus-Dark. Need to use `lib.mkForce value` or `lib.mkDefault value` in future to change priority
         # iconTheme = {
         #   name = "tela";
         #   package = pkgs.tela-icon-theme;
         # };
-      };
+      # };
     };
   };
 }

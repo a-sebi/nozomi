@@ -25,10 +25,13 @@ in {
     catppuccin = {
       enable = true;
       flavor = "frappe";
+      pointerCursor.accent = "red";
       pointerCursor.enable = true;
     };
     gtk.catppuccin.enable = true;
     gtk.catppuccin.flavor = "frappe";
+    qt.style.catppuccin.enable = true;
+    qt.style.catppuccin.flavor = "frappe";
     programs.bottom.catppuccin.enable = true;
     programs.neovim.catppuccin.enable = true;
     programs.kitty.catppuccin.enable = true;

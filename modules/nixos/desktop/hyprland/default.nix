@@ -24,6 +24,7 @@ in {
     # Desktop additions
     nozomi.desktop.addons = {
       brightnessctl = enabled;
+      catppuccin = enabled;
       dunst = enabled;
       grim = enabled;
       libnotify = enabled;
@@ -67,6 +68,11 @@ in {
         XDG_CURRENT_DESKTOP = "Hyprland";
       };
     };
+
+    services.displayManager.sddm.wayland.enable = true;
+    programs.dconf.enable = true;
+    services.displayManager.sddm.enable = true;
+    services.displayManager.sddm.package = pkgs.kdePackages.sddm;
 
     # environment.systemPackages = with pkgs;
     #  [
