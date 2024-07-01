@@ -76,6 +76,10 @@ with lib.nozomi; {
     hardware = {
       audio = enabled;
     };
+
+    virtualisation = {
+      kvm = enabled;
+    };
   };
 
   nix = {
