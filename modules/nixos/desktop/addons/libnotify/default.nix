@@ -15,6 +15,6 @@ in {
   };
 
   config = mkIf cfg.enable {
-    environment.systemPackages = with pkgs; [ libnotify ];
+    environment.systemPackages = with pkgs; [libnotify];
   };
 }

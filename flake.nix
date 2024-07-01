@@ -57,7 +57,6 @@
       };
 
       overlays = with inputs; [
-        flake.overlays.default
       ];
 
       systems.modules.nixos = with inputs; [

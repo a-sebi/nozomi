@@ -13,10 +13,12 @@ in {
     enable = mkBoolOpt false "Whether or not to enable Emacs.";
   };
 
-  config = mkIf cfg.enable {environment.systemPackages = with pkgs; [
-    ((emacsPackagesFor emacs29).emacsWithPackages (epkgs: [
-    epkgs.vterm
-    epkgs.pdf-tools
-    ]))
-  ];};
+  config = mkIf cfg.enable {
+    environment.systemPackages = with pkgs; [
+      ((emacsPackagesFor emacs29).emacsWithPackages (epkgs: [
+        epkgs.vterm
+        epkgs.pdf-tools
+      ]))
+    ];
+  };
 }

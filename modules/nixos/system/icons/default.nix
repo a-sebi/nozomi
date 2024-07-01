@@ -15,7 +15,6 @@ in {
   };
 
   config = mkIf cfg.enable {
-
     environment.systemPackages = with pkgs; [themechanger tela-icon-theme];
 
     # icons.packages = with pkgs;
@@ -35,6 +34,5 @@ in {
         # };
       };
     };
-
   };
 }

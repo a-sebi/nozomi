@@ -6,8 +6,7 @@
   ...
 }:
 with lib;
-with inputs;
-let
+with inputs; let
   inherit (lib) mkEnableOption mkIf;
   inherit (lib.nozomi) enabled;
 
@@ -33,8 +32,5 @@ in {
     programs.bottom.catppuccin.enable = true;
     programs.neovim.catppuccin.enable = true;
     programs.kitty.catppuccin.enable = true;
-
   };
-
-
 }

@@ -15,6 +15,6 @@ in {
   };
 
   config = mkIf cfg.enable {
-    environment.systemPackages = with pkgs; [ wl-clipboard ];
+    environment.systemPackages = with pkgs; [wl-clipboard];
   };
 }
