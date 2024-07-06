@@ -17,7 +17,7 @@ in {
     environment.systemPackages = with pkgs; [
       alejandra
       direnv
-      nixfmt
+      nixfmt-classic
       shellcheck
       tldr
     ];
