@@ -29,7 +29,7 @@ in {
         meslo-lgs-nf
         fira-code
         fira-code-symbols
-        fira-code-nerdfonts
+        fira-code-nerdfont
       ]
       ++ cfg.fonts;
   };
