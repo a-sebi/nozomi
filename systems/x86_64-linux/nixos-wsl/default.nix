@@ -38,7 +38,6 @@ with lib.nozomi; {
     keep-derivations = true;
   };
 
-
   time.timeZone = "Australia/Melbourne";
   #i18n.defaultLocale = "en_AU.UTF-8";
 

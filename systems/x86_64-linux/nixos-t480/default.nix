@@ -82,7 +82,7 @@ with lib.nozomi; {
     # Garbage collection
     gc.automatic = true;
     gc.dates = "weekly";
-    gc.options = "--delete-older-than 30d";
+    # gc.options = "--delete-older-than 60d";
   };
 
   environment.systemPackages = with pkgs; [
