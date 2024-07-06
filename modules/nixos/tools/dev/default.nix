@@ -16,6 +16,9 @@ in {
   config = mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
       alejandra
+      direnv
+      nixfmt
+      shellcheck
       tldr
     ];
   };
