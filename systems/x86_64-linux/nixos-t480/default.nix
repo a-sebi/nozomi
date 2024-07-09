@@ -71,6 +71,7 @@ with lib.nozomi; {
 
     system = {
       boot = enabled;
+      japanese = enabled;
     };
 
     hardware = {

@@ -72,6 +72,10 @@ with lib.nozomi; {
     services = {
       openssh = enabled;
     };
+
+    system = {
+      japanese = enabled;
+    };
   };
 
   nix = {
