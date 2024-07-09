@@ -19,7 +19,7 @@ in {
       GLFW_IM_MODULE = "fcitx";
     };
 
-    fonts.fonts = with pkgs; [
+    fonts.packages = with pkgs; [
       ipafont
     ];
 
