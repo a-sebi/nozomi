@@ -31,6 +31,12 @@
 
     # Catppuccin
     catppuccin.url = "github:catppuccin/nix";
+
+    # Lix
+    lix-module = {
+      url = "https://git.lix.systems/lix-project/nixos-module/archive/2.90.0.tar.gz";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs: let
@@ -62,6 +68,7 @@
       systems.modules.nixos = with inputs; [
         # home-manager.nixosModules.home-manager
         catppuccin.nixosModules.catppuccin
+        lix-module.nixosModules.default
       ];
 
       systems.hosts.nixos-wsl.modules = with inputs; [
