@@ -32,7 +32,7 @@ in {
           eval "$(atuin init zsh)"
 
           # Doom Emacs bin path
-          path+=('/home/asebi/.emacs.d/bin/')
+          path+=('/home/asebi/.config/emacs/bin')
         '';
 
         shellAliases = {

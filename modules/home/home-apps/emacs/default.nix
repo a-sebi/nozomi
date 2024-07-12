@@ -28,7 +28,7 @@ in {
         clang
       ];
 
-      # sessionPath = ["${config.xdg.configHome}/.emacs.d/bin"];
+      sessionPath = ["${config.xdg.configHome}/emacs/bin"];
       sessionVariables = {
         #DOOMDIR = ./doom;
         #DOOMDIR = "${config.xdg.configHome}/doom-config";
@@ -37,14 +37,14 @@ in {
       };
     };
 
-    programs.emacs = {
-      # enable = true;
-      extraPackages = epkgs: [
-        epkgs.vterm
-      ];
-    };
-    services.emacs = {
-      enable = true;
-    };
+    # programs.emacs = {
+    #   enable = true;
+    #   extraPackages = epkgs: [
+    #     epkgs.vterm
+    #   ];
+    # };
+    # services.emacs = {
+    #   enable = false;
+    # };
   };
 }
