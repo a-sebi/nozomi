@@ -27,6 +27,7 @@ with lib.nozomi; {
   wsl.defaultUser = "asebi";
   wsl.nativeSystemd = true;
   wsl.wslConf.network.hostname = "nixos-wsl";
+  # wsl.startMenuLaunchers = true;
 
   nix.settings = {
     # Enable flakes and new 'nix' command
