@@ -26,6 +26,7 @@ in {
 
       tools = {
         git = enabled;
+        fzf = enabled;
       };
 
       system = {
