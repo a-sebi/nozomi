@@ -2,11 +2,12 @@
   sshKeyPath,
   name,
   email,
+  allowed_signers,
 }: ''
   [user]
     name = ${name}
     email = ${email}
-      signingkey = ${sshKeyPath}
+    signingkey = ${sshKeyPath}
   [pull]
     rebase = true
   [init]
@@ -17,7 +18,9 @@
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
   [gpg]
-      format = ssh
+    format = ssh
+  [gpg "ssh"]
+    allowedSignersFile = ${allowed_signers}
   [commit]
     gpgsign = true
 ''

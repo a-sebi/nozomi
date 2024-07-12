@@ -61,8 +61,9 @@ with lib.nozomi; {
     };
 
     tools = {
-      tree = enabled;
       dev = enabled;
+      gpg = enabled;
+      tree = enabled;
     };
 
     services = {

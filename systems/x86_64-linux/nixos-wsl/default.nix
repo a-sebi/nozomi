@@ -66,7 +66,7 @@ with lib.nozomi; {
 
     tools = {
       dev = enabled;
-      direnv = enabled;
+      gpg = enabled;
       tree = enabled;
     };
 

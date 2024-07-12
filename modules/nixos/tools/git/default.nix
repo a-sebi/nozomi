@@ -53,6 +53,7 @@ in {
       sshKeyPath = "/home/${config.nozomi.user.name}/.ssh/id_ed25519.pub";
       name = "Afdal Sebi";
       email = "ssiabe@protonmail.com";
+      allowed_signers = "/home/${config.nozomi.user.name}/.ssh/allowed_signers";
     };
     nozomi.home.configFile."lazygit/config.yml".source = ./lazygitConfig.yml;
   };
