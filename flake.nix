@@ -19,10 +19,6 @@
     flake.url = "github:snowfallorg/flake";
     flake.inputs.nixpkgs.follows = "nixpkgs";
 
-    # NixOS Generators
-    # nixos-generators.url = "github:nix-community/nixos-generators";
-    # nixos-generators.inputs.nixpkgs.follows = "nixpkgs";
-
     # NixOS WSL
     nixos-wsl.url = "github:nix-community/nixos-wsl";
 
