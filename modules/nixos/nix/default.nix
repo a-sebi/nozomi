@@ -55,7 +55,7 @@ in {
         ["root" config.nozomi.user.name]
         ++ optional config.services.hydra.enable "hydra";
     in {
-      package = cfg.package;
+      package = pkgs.lix;
 
       settings =
         {
