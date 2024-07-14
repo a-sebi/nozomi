@@ -31,6 +31,5 @@ in {
         pkgs.fcitx5-configtool
       ];
     };
-
   };
 }
